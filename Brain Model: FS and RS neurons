@@ -1,0 +1,14 @@
+from neuron import h
+import matplotlib.pyplot as plt
+#Creating RS cell soma
+RS_soma = h.Section(name ='soma')
+RS_soma.L = 18.8
+RS_soma.diam = 18.8
+RS_soma.Ra = 123.0
+
+#Inserting Hodgkin Huxley mechanism and setting its parameters
+RS_soma.insert ('hh')
+RS_soma.gnabar_hh = 0.12 #Na conductance
+RS_soma.gkbar_hh = 0.036 #K conductance
+RS_soma.gl_hh = 0.003 #Leak conductance
+RS_soma.el_hh = -70 #leak reversal potential
