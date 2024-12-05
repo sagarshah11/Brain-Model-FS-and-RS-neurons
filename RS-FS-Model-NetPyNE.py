@@ -58,7 +58,7 @@ simConfig.filename = 'tut2'         # Set file output name
 simConfig.savePickle = False        # Save params, network and sim output to pickle file
 
 simConfig.analysis['plotRaster'] = {'saveFig': True, 'showFig': True}                  # Plot a raster
-simConfig.analysis['plotTraces'] = {'include': [1], 'saveFig': True, 'showFig' : True}  # Plot recorded traces for this list of cells
+simConfig.analysis['plotTraces'] = {'include': [i for i in range (1,16)], 'saveFig': True, 'showFig' : True}  # Plot recorded traces for this list of cells
 simConfig.analysis['plot2Dnet'] = {'saveFig': True, 'showFig' : True}                   # plot 2D cell positions and connections
 #Create Network and simulation
 sim.createSimulateAnalyze(netParams = netParams, simConfig = simConfig)
